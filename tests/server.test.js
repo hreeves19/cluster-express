@@ -8,13 +8,4 @@ describe('app.js', () => {
       .expect(200)
       .catch((err) => console.error(err));
   });
-
-  it('should start server again', async () => {
-    const response = await supertest(app)
-      .post('/')
-      .expect(200)
-      .catch((err) => console.error(err));
-
-    expect(response.body[0].hello).toEqual([1, 2, 3, 4]);
-  });
 });
