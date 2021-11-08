@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "test": "npm run test:format",
+    "test": "jest && npm run test:format",
     "test:format": "prettier --check .",
     "format": "prettier --write .",
     "start": "node server.js",
@@ -17,7 +18,9 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "jest": "^27.3.1",
     "nodemon": "^2.0.14",
-    "prettier": "2.4.1"
+    "prettier": "2.4.1",
+    "supertest": "^6.1.6"
   }
 }

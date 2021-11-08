@@ -1,11 +1,12 @@
 const express = require('express');
+const server = require('./src/app');
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+app.use('/api/', server);
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.debug(`Example app listening at http://localhost:${port}/api`);
 });
+
+module.exports = app;
